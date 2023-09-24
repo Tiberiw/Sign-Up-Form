@@ -1,6 +1,11 @@
 
 @font-face {
     font-family: Norse-Bold;
+    src: url(./fonts/Norse-Bold.otf);
+}
+
+@font-face {
+    font-family: Cactron-Bold;
     src: url(./fonts/CactronBold.otf);
 }
 
@@ -13,6 +18,8 @@ html {
     box-sizing: inherit;
 }
 
+
+input[type=text],
 body,
 p,
 li,
@@ -29,7 +36,7 @@ button,
 body {
     width: 100vw;
     height: 100vh;
-    font-family: 'Norse-Bold',sans-serif;
+    font-family: 'Cactron-Bold',sans-serif;
 }
 
 .container {
@@ -44,6 +51,17 @@ body {
     background-size: cover;
 
     position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.left p{
+   color: hsl(0, 75%, 95%);
+}
+
+.left p a{
+    color:hsl(0, 75%, 95%)
 }
 
 .logo-section {
@@ -51,30 +69,32 @@ body {
     position:absolute;
     width: 100%;
     top: 25%;
-
+    padding: 0.5em;
     display: flex;
-    background-color: rgba(0, 0, 0,0.55);
-    box-shadow: 0.01em 0.01em 0.2em black;
+    background-color: hsla(136, 87%, 4%, 0.75);
+    box-shadow: 0.05em -0.05em 0.2em black;
     justify-content: center;
     align-items: center;
-    gap: 32px;
+    gap: 2.25rem;
 
+    box-shadow: 0.01em 0.01em 0.2em black;
     
 }
 
 .logo-section img {
-    height: clamp(150px, 20%,250px);
-    width: clamp(150px, 20%,250px);
+    height: clamp(125px, 5vh, 200px);
+    width: clamp(125px, 5vh, 200px);
 
-    
 }
 
 .logo-section p {
+
+    font-family: "Norse-Bold", sans-serif;
     color: white;
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 6rem;
 
-    display: none;
+    
 }
 
 .right {
@@ -82,5 +102,176 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: hsl(168, 26%, 98%);
 }
 
+.right .title-section {
+    margin: 0;
+    padding: 4vh 4vw;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.right .title-section p {
+    font-size: 2rem;
+    color: #41271f;
+    margin: 0;
+    font-weight: bold;
+    
+}
+
+.title-section p span.sign-up {
+    color: #028673;
+}
+
+.title-section p span.youk {
+    color: #028673;
+}
+
+div.form-section {
+    padding: 3vh 5vw 7vh 4vw;
+
+    background-color: white;
+    /* WORK ON BOX SHADOW */
+    box-shadow: -0.01em -0.01em 0.3em black;
+    border-radius: 0.3em;
+    flex: 3;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+}
+
+form > p {
+    font-weight: bold;
+    font-size: 2.2rem;
+    color: #028673;
+    margin: 0;
+    padding: 0;
+}
+
+div.content-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4vh;
+    
+}
+
+div.content-input > div {
+    display: flex;
+    flex-direction: column;
+}
+
+form div.content-input label {
+
+    font-size: 1rem;
+    font-weight: bold;
+    color: 	hsl(19, 29%, 18%);
+} 
+
+input{
+    border: 0.15em solid hsl(37, 17%, 49%);
+    background-color: hsl(220, 13%, 99%);
+    border-radius: 0.1rem;
+    padding: 0.5em;
+    width: 22rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    outline: none;
+    transition: 0.05s;
+    -webkit-transition: 0.05s;
+    margin-right: 2vw;
+
+}
+
+input:focus {
+    border-style: none;
+    border: 0.2em solid #86775f;
+    background-color: hsl(220, 13%, 95%);
+    box-shadow: 0.01rem 0.01rem 0.1rem black;
+}
+
+input:valid:focus {
+    border: 0.2em solid green;
+}
+
+input:invalid:focus,
+input:valid.error {
+    border: 0.2em solid red;
+}
+
+
+button[type="submit"] {
+    padding: 0.75rem 1.75rem;
+    background-color: hsl(168, 26%, 97%);
+    color:#028673;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+    transition: 0.05s;
+    -webkit-transition: 0.05s;
+    border: 0.2em solid #028673;
+}
+
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background-color: hsl(171, 97%, 23%);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-style: none;
+    color: white;
+    border: 0.2em solid #028673;
+    
+}
+
+div.footer-section {
+    position: relative;
+    flex: 2;
+}
+
+.footer-section > .footer-content {
+    position: absolute;
+    bottom: 7vh;
+    left: 4vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    
+}
+
+.footer-content > p,
+.footer-content > a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: 	hsl(19, 29%, 18%);
+}
+
+.footer-content a {
+    color:#028673;
+}
+
+.footer-content a:hover {
+    color: hsl(171, 97%, 23%);
+    
+}
+
+output {
+    color: red;
+}
+
+button[type="button"] {
+    background-image: url(./images/pswd.svg);
+    background-size: 2.5rem 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    border-style: none;
+    border: none;
+    position: absolute;
+}
