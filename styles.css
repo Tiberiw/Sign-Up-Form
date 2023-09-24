@@ -19,7 +19,7 @@ html {
 }
 
 
-input[type=text],
+input,
 body,
 p,
 li,
@@ -178,13 +178,14 @@ input{
     background-color: hsl(220, 13%, 99%);
     border-radius: 0.1rem;
     padding: 0.5em;
+    margin-right: 2vw;
     width: 22rem;
     height: 2.5rem;
     font-size: 1.2rem;
     outline: none;
     transition: 0.05s;
     -webkit-transition: 0.05s;
-    margin-right: 2vw;
+    
 
 }
 
@@ -274,4 +275,11 @@ button[type="button"] {
     border-style: none;
     border: none;
     position: absolute;
+    left: 18.55vw;
+    top: 2.1vh;
+}
+
+.password,
+.re-password {
+    position: relative;
 }

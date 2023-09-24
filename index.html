@@ -4,39 +4,83 @@
         <meta charset="UTF-8">
         <title>Sign Up</title>
         <link rel="stylesheet" href="./styles.css">
-
+        <script src="./script.js" defer></script>
     </head>
     <body>
         <div class="container">
             <div class="left">
                 <div class="logo-section">
-                    <img src="./images/leaf-outline.svg" alt="Logo">
-                    <p>TEXT DE CACAT</p>
+                    <img src="./images/logo.svg" alt="Logo">
+                    <p>MERLIN</p>
                 </div>
-                
+                <p>Photo by <a target="_blank" rel="noopener noreferrer" href="https://unsplash.com/@merittthomas">Meritt Thomas</a> on <a target="_blank" rel="noopener noreferrer" href="https://unsplash.com/">Unsplash</a></p>
             </div>
             <div class="right">
                 <div class="title-section">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam quia repudiandae alias, aspernatur accusamus ducimus ad! A ducimus veniam dolorum? Quam, ratione fuga. Repellat eaque non qui, hic in officiis!
+                        This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
+                        <br>
+                        <span class="sign-up">Sign up <em>now</em> to get started</span>
+                        
                     </p>
                     <p>
-                        You know you want to.
+                        <span class="youk">You <em>know</em> you want to.</span>
+                        
                     </p>
     
                 </div>
-                <div class="from-section">
-                    <from action="#" method="post">
+                <div class="form-section">
+                    <form action="#" method="post" id="formular">
+                        <p>Let's do this!</p>
+                        <div class="content-input">
+                            
+                            <div class="first_name">
+                                <label for="first_name">FIRST NAME</label>
+                                <input type="text" name="first_name" id="first_name" required>
+                            </div>
+
+                            <div class="last_name">
+                                <label for="last_name">LAST NAME</label>
+                                <input type="text" name="last_name" id="last_name" required>
+                            </div>
+
+                            <div class="email">
+                                <label for="email">EMAIL</label>
+                                <input type="email" name="" id="email" required>
+                            </div>
+
+                            <div class="tel">
+                                <label for="telephone">PHONE NUMBER</label required>
+                                <input type="tel" name="" id="telephone">
+                            </div>
+
+                            <div class="password">
+                                <label for="pas">PASSWORD</label>
+                                <input type="password" name="password" id="pas" required>
+                                <output class="pswd"></output>
+                                <button type="button" class="pwd" tabindex="-1"></button>
+                            </div>
+
+                            <div class="re-password">
+                                <label for="re-pas">CONFIRM PASSWORD</label required>
+                                <input type="password" name="password_confirm" id="re-pas">
+                                <button type="button" class="re-pwd" tabindex="-1"></button>
+                            </div>
+
+                        </div>
     
-                    </from>
+                    </form>
     
                 </div>
                 <div class="footer-section">
-                    <button>Create Account</button>
-                    <p>Already have and account?<span>Log in</span></p>
+                    <div class="footer-content">
+                        <button type="submit" form="formular">Create Account</button>
+                        <p>Already have and account? <a href="#"> Log in</a></p>
+                    </div>
+                   
                 </div>
     
-    
+                
             </div>
         </div>
     </body>
